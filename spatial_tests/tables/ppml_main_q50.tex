@@ -1,0 +1,43 @@
+
+\begingroup
+\centering
+\begin{tabular}{lccc}
+   \tabularnewline \midrule \midrule
+   Dependent Variable: & \multicolumn{3}{c}{pred\_q50}\\
+   Model:                        & (1)     & (2)             & (3)\\  
+   \midrule
+   \emph{Variables}\\
+   log1p(distcap)                &         & -0.7955$^{***}$ & -0.1959\\   
+                                 &         & (0.1145)        & (0.1266)\\   
+   log1p(pop\_ratio\_lag)        &         & -0.0454         & 0.0930\\   
+                                 &         & (0.2756)        & (0.2845)\\   
+   contig                        &         &                 & -0.1630\\   
+                                 &         &                 & (0.1538)\\   
+   comlang\_off                  &         &                 & 0.5117$^{*}$\\   
+                                 &         &                 & (0.1996)\\   
+   log1p(gdp\_ratio\_lag)        &         &                 & 0.4369\\   
+                                 &         &                 & (0.6576)\\   
+   log1p(stocks\_lag)            &         &                 & 0.3893$^{***}$\\   
+                                 &         &                 & (0.0578)\\   
+   sibling\_ever                 &         &                 & 0.9911$^{*}$\\   
+                                 &         &                 & (0.3918)\\   
+   eu\_both\_lag                 &         &                 & 0.0034\\   
+                                 &         &                 & (0.1251)\\   
+   \midrule
+   \emph{Fixed-effects}\\
+   sending\_country              & Yes     & Yes             & Yes\\  
+   receiving\_country            & Yes     & Yes             & Yes\\  
+   year                          & Yes     & Yes             & Yes\\  
+   \midrule
+   \emph{Fit statistics}\\
+   Observations                  & 18,600  & 18,600          & 18,600\\  
+   Squared Correlation           & 0.52252 & 0.58673         & 0.64782\\  
+   Adjusted Pseudo R$^2$         & 0.72398 & 0.76556         & 0.82276\\  
+   Whithin Adjusted Pseudo R$^2$ &         & 0.15064         & 0.35789\\  
+   Ramsey RESET test (p-value)   & 0.0334  & 0.1860          & 0.2032\\  
+   \midrule \midrule
+   \multicolumn{4}{l}{\emph{Signif. Codes: ***: 0.001, **: 0.01, *: 0.05, .: 0.1}}\\
+\end{tabular}
+\par\endgroup
+
+

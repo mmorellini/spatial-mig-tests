@@ -1,0 +1,31 @@
+
+\begingroup
+\centering
+\begin{tabular}{lccccc}
+   \tabularnewline \midrule \midrule
+   Dependent Variables:          & pred\_q05       & pred\_q25       & pred\_q50       & pred\_q75       & pred\_q95\\   
+   Model:                        & (1)             & (2)             & (3)             & (4)             & (5)\\  
+   \midrule
+   \emph{Variables}\\
+   log1p(distcap)                & -0.8286$^{***}$ & -0.8095$^{***}$ & -0.7955$^{***}$ & -0.7812$^{***}$ & -0.7608$^{***}$\\   
+                                 & (0.1235)        & (0.1180)        & (0.1145)        & (0.1114)        & (0.1071)\\   
+   log1p(pop\_ratio\_lag)        & -0.0629         & -0.0503         & -0.0454         & -0.0430         & -0.0431\\   
+                                 & (0.2920)        & (0.2831)        & (0.2756)        & (0.2671)        & (0.2536)\\   
+   \midrule
+   \emph{Fixed-effects}\\
+   sending\_country              & Yes             & Yes             & Yes             & Yes             & Yes\\  
+   receiving\_country            & Yes             & Yes             & Yes             & Yes             & Yes\\  
+   year                          & Yes             & Yes             & Yes             & Yes             & Yes\\  
+   \midrule
+   \emph{Fit statistics}\\
+   Observations                  & 18,600          & 18,600          & 18,600          & 18,600          & 18,600\\  
+   Squared Correlation           & 0.61652         & 0.59943         & 0.58673         & 0.57345         & 0.55421\\  
+   Adjusted Pseudo R$^2$         & 0.77594         & 0.77003         & 0.76556         & 0.76063         & 0.75315\\  
+   Whithin Adjusted Pseudo R$^2$ & 0.15335         & 0.15204         & 0.15064         & 0.14871         & 0.14537\\  
+   \midrule \midrule
+   \multicolumn{6}{l}{\emph{Clustered (sending\_country \& receiving\_country \& year) standard-errors in parentheses}}\\
+   \multicolumn{6}{l}{\emph{Signif. Codes: ***: 0.001, **: 0.01, *: 0.05, .: 0.1}}\\
+\end{tabular}
+\par\endgroup
+
+
