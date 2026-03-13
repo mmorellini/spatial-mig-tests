@@ -4,6 +4,60 @@ library(ggblend)
 library(here)
 
 
+# 0. Load script with plotting helpers and data objects-------------------------
+
+## Plotting helpers
+
+source(here("scripts", "utils", "plotting_helpers.R"))
+
+# Migration flows (Bayesian)
+if (!exists("merged")) {
+  load(here("data_processed", "merged-flows.RData"))  # loads `merged`
+}
+
+# Simulations from script 04
+if (!exists("gravity_year_sims")) {
+  gravity_year_sims <- readRDS(
+    here("data_processed", "gravity_year_sims.rds"))
+}
+
+if (!exists("mst_year_sims")) {
+  mst_year_sims <- readRDS(
+    here("data_processed", "mst_year_sims.rds"))
+}
+
+# Network metrics from script 04
+if (!exists("global_values_long")) {
+  global_values_long <- readRDS(
+    here("data_processed", "global_values_long.rds"))
+}
+
+# Load observed indices for all pred_q* from script 04
+if (!exists("obs_values_all_q")) {
+  obs_values_all_q <- readRDS(
+    here("data_processed", "observed_values_all_q.rds"))
+}
+
+# By-country distances from script 05
+if (!exists("country_distances_long")) {
+  country_distances_long <- readRDS(
+    here("data_processed", "country_distances_long.rds"))
+}
+
+# By corridor summaries from script 05
+if (!exists("sim_summaries")) {
+  sim_summaries <- readRDS(
+    here("data_processed", "sim_summaries.rds"))
+}
+
+if (!exists("corridor_fit")) {
+  corridor_fit <- readRDS(
+    here("data_processed", "sim_summaries.rds"))
+}
+
+
+# 1. Comparison of simulated vs observed bilateral flows, by corridor ----------
+
 
 corridors_lab <- sim_summaries %>%
   arrange(desc(mean_sim)) %>%      # highest overall_mean first
